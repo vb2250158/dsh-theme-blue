@@ -1,0 +1,16 @@
+html.dsh-private-theme-blue [data-dsh-private-ui='theme-mode'] {
+  min-height: 76px;
+  padding: 12px 14px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  white-space: normal;
+}
+html.dsh-private-theme-blue [data-dsh-private-ui='theme-mode-description'] {
+  color: var(--dsw-alias-label-secondary);
+}
+
+html.dsh-private-theme-blue [data-dsh-private-ui='theme-mode'][aria-pressed='true'] [data-dsh-private-ui='theme-mode-description'] {
+  color: var(--dsw-alias-brand-primary-invert);
+}
