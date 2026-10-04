@@ -1,5 +1,5 @@
 /** Private blue theme foundation client plugin. */
-import type { ClientContext } from '@deepseek-ai/dsh-client-runtime/client';
+import type { Context as ClientContext } from '@deepseek-ai/cordis';
 export declare const BLUE_THEME_OVERRIDE_SOURCE = "dsh-theme-blue";
 export declare const BLUE_THEME_ROOT_CLASS = "dsh-private-theme-blue";
 export declare const BLUE_THEME_STYLE_ID: string;

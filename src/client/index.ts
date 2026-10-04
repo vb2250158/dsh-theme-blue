@@ -3,7 +3,11 @@
  * system palette. The official runtime remains the owner of the active color
  * scheme; this private loader owns the installed blue visual foundation.
  */
-import type { ClientContext } from '@deepseek-ai/dsh-client-runtime/client'
+import type { Context as ClientContext } from '@deepseek-ai/cordis'
+import type {} from '@deepseek-ai/dsh-api-remotes/client'
+import type {} from '@deepseek-ai/dsh-api-session-controller/client'
+import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
+import type {} from '@deepseek-ai/dsh-client-ui-session/client'
 // Type-only: pulls the ui-theme Context merge; collaboration uses ctx.theme.
 import type {} from '@deepseek-ai/dsh-client-ui-theme/client'
 import type { ThemeTokenOverrides } from '@deepseek-ai/dsh-client-ui-theme/client'

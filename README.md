@@ -1,5 +1,7 @@
 # dsh-theme-blue
 
+This release requires DSH 0.2.1-alpha.1 or a compatible 0.2 release. See [compatibility details](docs/dsh-0.2-compatibility.md).
+
 私有主题基础、样式包和贴纸装饰的入口。
 
 ## 安装
