@@ -12,6 +12,7 @@ import type {} from '@deepseek-ai/dsh-client-ui-session/client'
 import type {} from '@deepseek-ai/dsh-client-ui-theme/client'
 import type { ThemeTokenOverrides } from '@deepseek-ai/dsh-client-ui-theme/client'
 import BLUE_THEME_STYLE from '../../themes/blue/style.css'
+import { installSettingsIconStyles } from './settings-icons.ts'
 
 /** Stable override source used by the official theme registry. */
 export const BLUE_THEME_OVERRIDE_SOURCE = 'dsh-theme-blue'
@@ -71,7 +72,7 @@ const BLUE_TOKENS: ThemeTokenOverrides = {
 }
 
 /** Browser services required by this plugin. */
-export const inject = ['theme']
+export const inject = ['theme', 'slots']
 
 /**
  * Install the private stylesheet and scope class for this plugin lifetime.
@@ -106,4 +107,5 @@ export function apply(ctx: ClientContext): void {
     'ui-theme-blue: foundation token override',
   )
   installBlueThemeStyles(ctx)
+  installSettingsIconStyles(ctx)
 }

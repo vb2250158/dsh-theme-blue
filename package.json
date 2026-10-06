@@ -1,7 +1,7 @@
 {
   "name": "dsh-theme-blue",
   "description": "Private blue theme foundation for the DeepSeek Harness web client",
-  "version": "0.1.0-rc.8.9",
+  "version": "0.1.0-rc.8.10",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
@@ -21,6 +21,7 @@
     "client": {
       "inject": [
         "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-settings",
         "@deepseek-ai/dsh-api-remotes",
         "@deepseek-ai/dsh-api-session-controller",
         "@deepseek-ai/dsh-client-ui-renderer",
@@ -40,7 +41,8 @@
     "@deepseek-ai/dsh-api-remotes": ">=0.2.1-alpha.1 <0.3.0",
     "@deepseek-ai/dsh-api-session-controller": ">=0.2.1-alpha.1 <0.3.0",
     "@deepseek-ai/dsh-client-ui-renderer": ">=0.2.1-alpha.1 <0.3.0",
-    "@deepseek-ai/dsh-client-ui-session": ">=0.2.1-alpha.1 <0.3.0"
+    "@deepseek-ai/dsh-client-ui-session": ">=0.2.1-alpha.1 <0.3.0",
+    "@deepseek-ai/dsh-client-ui-settings": ">=0.2.1-alpha.1 <0.3.0"
   },
   "files": [
     "lib/index.js",
@@ -53,6 +55,7 @@
     "cordis.patch.yml",
     "README.md",
     "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
     "tests/theme-blue-client.test.mjs",
     "docs"
   ],
@@ -69,6 +72,7 @@
     "build": "node scripts/build.mjs"
   },
   "devDependencies": {
-    "esbuild": "0.25.12"
+    "esbuild": "0.25.12",
+    "lucide-static": "1.52.0"
   }
 }

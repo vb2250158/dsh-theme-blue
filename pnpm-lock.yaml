@@ -11,6 +11,9 @@ importers:
       esbuild:
         specifier: 0.25.12
         version: 0.25.12
+      lucide-static:
+        specifier: 1.52.0
+        version: 1.52.0
 
 packages:
 
@@ -175,6 +178,9 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
+  lucide-static@1.52.0:
+    resolution: {integrity: sha512-0zZYihAze4ZmUCcyNa9OkWYqn/Y5f9AdTh02AZIxMtP5ravcTTfoSIAnUPBH6ZvKxt+ZW28JB0ldzLRyD82fcw==}
+
 snapshots:
 
   '@esbuild/aix-ppc64@0.25.12':
@@ -283,3 +289,5 @@ snapshots:
       '@esbuild/win32-arm64': 0.25.12
       '@esbuild/win32-ia32': 0.25.12
       '@esbuild/win32-x64': 0.25.12
+
+  lucide-static@1.52.0: {}

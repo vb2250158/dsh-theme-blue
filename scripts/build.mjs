@@ -17,7 +17,7 @@ const result = await build({
   write: false,
   sourcemap: false,
   legalComments: 'none',
-  loader: { '.css': 'text' },
+  loader: { '.css': 'text', '.svg': 'text' },
   logLevel: 'silent',
 })
 
