@@ -14,3 +14,10 @@ html.dsh-private-theme-blue [data-dsh-private-ui='theme-mode-description'] {
 html.dsh-private-theme-blue [data-dsh-private-ui='theme-mode'][aria-pressed='true'] [data-dsh-private-ui='theme-mode-description'] {
   color: var(--dsw-alias-brand-primary-invert);
 }
+
+@media (min-width: 1281px) {
+  html.dsh-private-theme-blue [role='dialog'][data-shortcut-modal='settings'] {
+    width: 1120px;
+    height: min(900px, calc(100vh - 2 * max(24px, var(--dsh-frame-overlay-top, 24px))));
+  }
+}

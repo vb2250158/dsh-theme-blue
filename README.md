@@ -4,6 +4,8 @@ This release requires DSH 0.2.1-alpha.1 or a compatible 0.2 release. See [compat
 
 私有主题基础、样式包和贴纸装饰的入口。
 
+桌面视口宽于 1280px 时，设置窗口宽 1120px、高度最多 900px，保留官方窗口留边以及导航和内容的独立滚动。较窄视口沿用原有布局；卸载主题后恢复官方尺寸。
+
 ## 安装
 
 锁定公开仓库的提交后，通过 DSH 官方入口安装：

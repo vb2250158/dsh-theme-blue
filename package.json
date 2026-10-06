@@ -1,7 +1,7 @@
 {
   "name": "dsh-theme-blue",
   "description": "Private blue theme foundation for the DeepSeek Harness web client",
-  "version": "0.1.0-rc.8.8",
+  "version": "0.1.0-rc.8.9",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
