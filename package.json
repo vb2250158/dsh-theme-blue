@@ -1,7 +1,7 @@
 {
   "name": "dsh-theme-blue",
   "description": "Private blue theme foundation for the DeepSeek Harness web client",
-  "version": "0.1.0-rc.8.10",
+  "version": "0.1.0-rc.8.11",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
@@ -15,7 +15,9 @@
       "default": "./lib/client.js"
     },
     "./src/*": "./src/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
   },
   "dsh": {
     "client": {
@@ -57,7 +59,10 @@
     "LICENSE",
     "THIRD_PARTY_NOTICES.md",
     "tests/theme-blue-client.test.mjs",
-    "docs"
+    "docs",
+    "locale",
+    "icon.svg",
+    "ICON_LICENSE.txt"
   ],
   "repository": {
     "type": "git",
@@ -74,5 +79,6 @@
   "devDependencies": {
     "esbuild": "0.25.12",
     "lucide-static": "1.52.0"
-  }
+  },
+  "icon": "./icon.svg"
 }
