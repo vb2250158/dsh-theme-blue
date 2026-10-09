@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-rc.8.16 (2026-10-09)
+
+- 提高桌宠气泡的文字与背景对比度，保留当前字体和字号。
+- Increase contrast between pet bubble text and background while retaining the font and text size.
+
 ## 0.1.0-rc.8.15 (2026-10-09)
 
 - 网页桌宠文字改用 DSH 默认字体，碎碎念字号最小 12px。

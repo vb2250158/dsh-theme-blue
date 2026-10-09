@@ -1,3 +1,17 @@
+html.dsh-private-theme-blue {
+  --dsh-pet-bubble-text: #111;
+  --dsh-pet-bubble-fill: rgba(255, 255, 255, 0.98);
+}
+
+html.dsh-private-theme-blue .dsh-pet-bubble {
+  color: var(--dsh-pet-bubble-text);
+  background: var(--dsh-pet-bubble-fill);
+}
+
+html.dsh-private-theme-blue .dsh-pet-bubble::after {
+  border-top-color: var(--dsh-pet-bubble-fill);
+}
+
 /* Pet text follows DSH typography even when the pet injects its font later. */
 html.dsh-private-theme-blue :is(.dsh-pet-bubble, .dsh-pet-chat, .dsh-pet-score) {
   font-family: var(--dsw-font-family);
