@@ -1,3 +1,15 @@
+/* Pet text follows DSH typography even when the pet injects its font later. */
+html.dsh-private-theme-blue :is(.dsh-pet-bubble, .dsh-pet-chat, .dsh-pet-score) {
+  font-family: var(--dsw-font-family);
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+html.dsh-private-theme-blue .dsh-pet-bubble.dsh-pet-whisper {
+  font-size: max(12px, calc(var(--dsh-pet-size) * 0.034));
+  line-height: 1.6;
+}
+
 html.dsh-private-theme-blue [data-dsh-private-ui='theme-mode'] {
   min-height: 76px;
   padding: 12px 14px;

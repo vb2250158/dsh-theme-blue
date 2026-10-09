@@ -4,6 +4,10 @@ This release requires DSH 0.2.1-alpha.1 or a compatible 0.2 release. See [compat
 
 私有主题基础、样式包和贴纸装饰的入口。
 
+网页桌宠的气泡、对话输入框和积分卡片使用 DSH 默认字体。碎碎念文字最小 12px，行距为字号的 1.6 倍；关闭蓝色主题后恢复桌宠原有样式。
+
+Web pet bubbles, chat input and score cards use the DSH default font. Whisper text stays at least 12px with a 1.6 line height; disabling the blue theme restores the pet styles.
+
 与 `dafy-whale-theme` 同时启用时，左上角只显示一组大肥鱼图标和标题，避免上游品牌样式在新版 DSH 的嵌套元素中重复显示。关闭大肥鱼主题后恢复原有品牌区域。
 
 When enabled alongside `dafy-whale-theme`, the sidebar shows one whale mark and title. The original identity returns when the whale theme is disabled.

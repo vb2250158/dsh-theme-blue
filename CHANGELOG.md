@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-rc.8.15 (2026-10-09)
+
+- 网页桌宠文字改用 DSH 默认字体，碎碎念字号最小 12px。
+- Use the DSH default font for web pet text and keep whisper text at least 12px.
+
 ## 0.1.0-rc.8.14 (2026-10-09)
 
 - 合并设置滑条样式，同时保留现有品牌去重、设置窗口尺寸及导航图标。
