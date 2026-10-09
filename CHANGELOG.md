@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-rc.8.17 (2026-10-09)
+
+- 修复弹窗内开关颜色变量失效导致轨道和圆点透明的问题，保留自定义颜色、键盘焦点和禁用状态。
+- Fall back to DSH tokens at each switch when inherited colors are invalid, retaining custom colors, focus and disabled states.
+
 ## 0.1.0-rc.8.16 (2026-10-09)
 
 - 提高桌宠气泡的文字与背景对比度，保留当前字体和字号。

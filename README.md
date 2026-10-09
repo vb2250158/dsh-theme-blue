@@ -16,9 +16,9 @@ When enabled alongside `dafy-whale-theme`, the sidebar shows one whale mark and 
 
 设置导航为当前 16 个设置项提供不同的功能图标，包括浏览器、规则、用量、对话、网络、订阅和开发工具。图标按公开 section 注册表的 ID 与排序生成主题样式，菜单重排或语言变化时保持对应；未收录的设置项沿用官方图标，卸载主题后恢复原样。Lucide 图标在构建时嵌入，无额外网络请求，许可见 [第三方声明](THIRD_PARTY_NOTICES.md)。
 
-设置弹窗中的复选框和现有滑动开关使用同一组主题滑条，保留标签点击、键盘、禁用状态和保存事件。尺寸与颜色由 `themes/blue/style.css` 中的 `--dsh-switch-*` 变量控制；聊天任务列表保持原样，卸载主题后恢复原始样式。
+设置弹窗中的复选框和现有滑动开关使用同一组主题滑条，保留标签点击、键盘、禁用状态和保存事件。尺寸与颜色由 `themes/blue/style.css` 中的 `--dsh-switch-*` 变量控制；继承的颜色变量无法解析时在控件处回退到 DSH 主题令牌，支持通过 portal 挂载的弹窗，关闭状态的圆点沿用官方颜色。聊天任务列表保持原样，卸载主题后恢复原始样式。
 
-Settings checkboxes and existing switches share themed tracks while retaining labels, keyboard input, disabled states and save events. The `--dsh-switch-*` variables in `themes/blue/style.css` control dimensions and colors. Chat task lists remain unchanged; unloading restores the original styles.
+Settings checkboxes and existing switches share themed tracks while retaining labels, keyboard input, disabled states and save events. The `--dsh-switch-*` variables in `themes/blue/style.css` control dimensions and colors; unresolved inherited colors fall back to DSH tokens at each control, including dialogs mounted through portals. Off-state thumbs retain the official color. Chat task lists remain unchanged; unloading restores the original styles.
 
 ## 安装
 

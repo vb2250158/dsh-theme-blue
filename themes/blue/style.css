@@ -76,7 +76,7 @@ html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='di
   border: 0 !important;
   border-radius: 999px !important;
   corner-shape: round;
-  background: var(--dsh-switch-off) !important;
+  background: var(--dsh-switch-off, var(--dsw-alias-border-l3)) !important;
   vertical-align: middle;
   cursor: pointer;
   transition: background-color var(--ds-transition-duration-fast) var(--ds-ease-in-out);
@@ -90,13 +90,18 @@ html.dsh-private-theme-blue button[role='switch'] > span {
   height: var(--dsh-switch-thumb-size) !important;
   border-radius: 50% !important;
   corner-shape: round;
-  background: var(--dsh-switch-thumb) !important;
+  background: var(--dsh-switch-thumb, var(--dsw-alias-label-primary-foreground)) !important;
   transform: translateX(0) !important;
   transition: transform var(--ds-transition-duration-fast) var(--ds-ease-in-out) !important;
 }
 
 html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch']:checked, [role='dialog']:has(> nav) input[type='checkbox']:checked, button[role='switch'][aria-checked='true']) {
-  background: var(--dsh-switch-on) !important;
+  background: var(--dsh-switch-on, var(--dsw-alias-brand-primary)) !important;
+}
+
+html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='dialog']:has(> nav) input[type='checkbox']):not(:checked)::before,
+html.dsh-private-theme-blue button[role='switch'][aria-checked='false'] > span {
+  background: var(--dsh-switch-thumb, var(--dsw-alias-switch-thumb, var(--dsw-alias-label-primary-foreground))) !important;
 }
 
 html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='dialog']:has(> nav) input[type='checkbox']):checked::before,
@@ -105,7 +110,7 @@ html.dsh-private-theme-blue button[role='switch'][aria-checked='true'] > span {
 }
 
 html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='dialog']:has(> nav) input[type='checkbox'], button[role='switch']):focus-visible {
-  outline: 2px solid var(--dsh-switch-on);
+  outline: 2px solid var(--dsh-switch-on, var(--dsw-alias-brand-primary));
   outline-offset: 3px;
 }
 
