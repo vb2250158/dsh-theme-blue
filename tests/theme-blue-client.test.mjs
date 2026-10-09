@@ -164,6 +164,23 @@ test('蓝色主题样式与根类随 loader 生命周期安装和清理', async 
   })
 })
 
+test('设置滑条保留原生输入、禁用、键盘焦点及减少动画样式', async () => {
+  const client = await loadClientBundle()
+  await withDocument(document => {
+    const state = clientContext()
+    client.apply(state.ctx)
+    const css = document.appended[0].textContent
+    assert.match(css, /\[role='dialog'\]:has\(> nav\) input\[type='checkbox'\]/)
+    assert.match(css, /button\[role='switch'\]\[aria-checked='true'\]/)
+    assert.match(css, /:focus-visible/)
+    assert.match(css, /:disabled/)
+    assert.match(css, /prefers-reduced-motion: reduce/)
+    assert.match(css, /--dsh-switch-on: var\(--dsw-alias-brand-primary\)/)
+    state.effects[1]()
+    assert.equal(document.appended.some(tag => tag.dataset.pluginCss === client.BLUE_THEME_STYLE_ID), false)
+  })
+})
+
 test('当前十六个设置入口各有不同的语义图标', async () => {
   const client = await loadClientBundle()
   const ids = [

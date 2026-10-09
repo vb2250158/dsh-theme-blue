@@ -26,3 +26,72 @@ html.dsh-private-theme-blue:has(style[data-plugin-css='dafy-whale-theme-css']) [
     height: min(900px, calc(100vh - 2 * max(24px, var(--dsh-frame-overlay-top, 24px))));
   }
 }
+
+html.dsh-private-theme-blue {
+  --dsh-switch-width: 36px;
+  --dsh-switch-height: 20px;
+  --dsh-switch-thumb-size: 16px;
+  --dsh-switch-inset: 2px;
+  --dsh-switch-off: var(--dsw-alias-border-l3);
+  --dsh-switch-on: var(--dsw-alias-brand-primary);
+  --dsh-switch-thumb: var(--dsw-alias-label-primary-foreground);
+}
+
+html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='dialog']:has(> nav) input[type='checkbox'], button[role='switch']) {
+  appearance: none;
+  box-sizing: border-box !important;
+  position: relative !important;
+  display: inline-block;
+  flex: 0 0 auto !important;
+  width: var(--dsh-switch-width) !important;
+  height: var(--dsh-switch-height) !important;
+  padding: var(--dsh-switch-inset) !important;
+  margin: 0;
+  border: 0 !important;
+  border-radius: 999px !important;
+  corner-shape: round;
+  background: var(--dsh-switch-off) !important;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background-color var(--ds-transition-duration-fast) var(--ds-ease-in-out);
+}
+
+html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='dialog']:has(> nav) input[type='checkbox'])::before,
+html.dsh-private-theme-blue button[role='switch'] > span {
+  content: '';
+  display: block !important;
+  width: var(--dsh-switch-thumb-size) !important;
+  height: var(--dsh-switch-thumb-size) !important;
+  border-radius: 50% !important;
+  corner-shape: round;
+  background: var(--dsh-switch-thumb) !important;
+  transform: translateX(0) !important;
+  transition: transform var(--ds-transition-duration-fast) var(--ds-ease-in-out) !important;
+}
+
+html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch']:checked, [role='dialog']:has(> nav) input[type='checkbox']:checked, button[role='switch'][aria-checked='true']) {
+  background: var(--dsh-switch-on) !important;
+}
+
+html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='dialog']:has(> nav) input[type='checkbox']):checked::before,
+html.dsh-private-theme-blue button[role='switch'][aria-checked='true'] > span {
+  transform: translateX(calc(var(--dsh-switch-width) - var(--dsh-switch-thumb-size) - 2 * var(--dsh-switch-inset))) !important;
+}
+
+html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='dialog']:has(> nav) input[type='checkbox'], button[role='switch']):focus-visible {
+  outline: 2px solid var(--dsh-switch-on);
+  outline-offset: 3px;
+}
+
+html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='dialog']:has(> nav) input[type='checkbox'], button[role='switch']):disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='dialog']:has(> nav) input[type='checkbox'], button[role='switch']),
+  html.dsh-private-theme-blue :is(input[type='checkbox'][role='switch'], [role='dialog']:has(> nav) input[type='checkbox'])::before,
+  html.dsh-private-theme-blue button[role='switch'] > span {
+    transition: none !important;
+  }
+}

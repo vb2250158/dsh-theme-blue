@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-rc.8.14 (2026-10-09)
+
+- 合并设置滑条样式，同时保留现有品牌去重、设置窗口尺寸及导航图标。
+- Merge themed settings switches without replacing the current brand, dialog sizing or navigation icons.
+
 ## 0.1.0-rc.8.13 (2026-10-07)
 
 - 与大肥鱼主题同时启用时，避免新版 DSH 的嵌套品牌元素重复绘制鲸鱼图标和标题。
