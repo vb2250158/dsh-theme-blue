@@ -41,6 +41,7 @@ const BLUE_TOKENS: ThemeTokenOverrides = {
   '--dsw-alias-button-primary-hover': { light: '#1d4ed8', dark: '#60a5fa' },
   '--dsw-alias-button-info-fill': { light: '#3b82f6', dark: '#60a5fa' },
   '--dsw-alias-button-info-hover': { light: '#2563eb', dark: '#93c5fd' },
+  '--dsw-alias-button-elevated-fill': { light: '#e8f1ff', dark: '#12345f' },
   '--dsw-alias-button-floating-hover': { light: '#dbeafe', dark: '#173d6d' },
   '--dsw-alias-interactive-bg-active': { light: 'rgba(59, 130, 246, 0.14)', dark: 'rgba(147, 197, 253, 0.18)' },
   '--dsw-alias-interactive-bg-hover': { light: 'rgba(59, 130, 246, 0.08)', dark: 'rgba(147, 197, 253, 0.10)' },

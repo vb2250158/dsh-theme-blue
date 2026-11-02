@@ -4,6 +4,8 @@ This release requires DSH 0.2.1-alpha.1 or a compatible 0.2 release. See [compat
 
 私有主题基础、样式包和贴纸装饰的入口。
 
+“新会话”按钮使用蓝色主题的浅色和深色底色。
+
 网页桌宠的气泡、对话输入框和积分卡片使用 DSH 默认字体。气泡使用深色文字和 98% 不透明白底。碎碎念文字最小 12px，行距为字号的 1.6 倍；关闭蓝色主题后恢复桌宠原有样式。
 
 Web pet bubbles, chat input and score cards use the DSH default font. Bubbles use dark text on a 98% opaque white background. Whisper text stays at least 12px with a 1.6 line height; disabling the blue theme restores the pet styles.
