@@ -138,6 +138,19 @@ test('私有蓝色主题在 loader 启用时注册基础 token 覆盖层', async
   assert.equal(state.layers[0].tokens['--dsw-alias-bg-base'].dark, '#071a33')
 })
 
+test('new-session elevated fill follows the blue palette in both schemes', async () => {
+  const client = await loadClientBundle()
+  const state = clientContext()
+  client.apply(state.ctx)
+  assert.deepEqual(state.layers[0].tokens['--dsw-alias-button-elevated-fill'], {
+    light: '#e8f1ff', dark: '#12345f',
+  })
+  assert.equal(state.layers[0].tokens['--dsw-alias-button-primary-fill'].light, '#2563eb')
+  assert.equal(state.layers[0].tokens['--dsw-alias-button-primary-fill'].dark, '#3b82f6')
+  state.effects[0]()
+  assert.deepEqual(state.disposals, ['dsh-theme-blue'])
+})
+
 test('停用私有主题 loader 时只撤销它自己的 token 覆盖层', async () => {
   const client = await loadClientBundle()
   const state = clientContext()

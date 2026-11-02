@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-rc.8.18 (2026-11-02)
+
+- 新会话按钮跟随蓝色主题的浅色和深色底色，保留主要按钮颜色及主题停用清理。
+- Apply blue light and dark elevated-button fills to the new-session control while retaining primary-button colors and theme disposal.
+
 ## 0.1.0-rc.8.17 (2026-10-09)
 
 - 修复弹窗内开关颜色变量失效导致轨道和圆点透明的问题，保留自定义颜色、键盘焦点和禁用状态。
