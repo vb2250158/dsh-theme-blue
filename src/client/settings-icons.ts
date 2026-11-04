@@ -1,4 +1,5 @@
-/** Semantic settings glyphs projected from the public section ledger. */
+/** Semantic settings glyphs registered through the public navigation icon slot. */
+import { createElement } from 'react'
 import type { Context } from '@deepseek-ai/cordis'
 import type {} from '@deepseek-ai/dsh-client-ui-renderer/client'
 import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
@@ -38,54 +39,25 @@ const SECTION_ICONS: ReadonlyMap<string, string> = new Map([
   ['opencode-go', terminal],
 ])
 
-const NAV_BUTTON = "html.dsh-private-theme-blue [role='dialog'][data-shortcut-modal='settings'] > nav > div:last-child > button"
-
 /**
- * Install decorative glyphs without changing settings labels or actions.
- * Ledger order matches the settings shell's raw, stably sorted section rows.
+ * Register decorative glyphs without changing settings labels or actions.
+ * The shell selects each glyph by section id and owns its decorative wrapper.
  * Unknown sections retain the official glyph; disposal restores every glyph.
- * @param ctx - Client context owning the section subscription and stylesheet.
+ * @param ctx - Client context owning the reversible icon registrations.
  */
 export function installSettingsIconStyles(ctx: Context): void {
-  if (typeof document === 'undefined') return
-  ctx.slots.inject('settings.section', () => {
-    const tag = document.createElement('style')
-    tag.dataset.plugin = 'dsh-theme-blue'
-    tag.dataset.pluginCss = 'dsh-theme-blue/settings-icons.css'
-    const rebuild = () => {
-      const icons = ctx.slots.entries('settings.section')
-        .map(entry => ({ id: entry.options.id, order: entry.options.order ?? 0 }))
-        .sort((left, right) => left.order - right.order)
-        .flatMap((section, index) => {
-          const svg = section.id === undefined ? undefined : SECTION_ICONS.get(section.id)
-          if (svg === undefined) return []
-          return [{ selector: `${NAV_BUTTON}:nth-child(${index + 1})`, svg }]
-        })
-      if (icons.length === 0) {
-        tag.textContent = ''
-        return
-      }
-      const before = icons.map(icon => `${icon.selector}::before`).join(',\n')
-      const originals = icons.map(icon => `${icon.selector} > svg`).join(',\n')
-      const masks = icons.map(icon => {
-        const data = encodeURIComponent(icon.svg.replaceAll('currentColor', '#000'))
-        return `${icon.selector}::before { mask-image: url("data:image/svg+xml,${data}"); }`
-      }).join('\n')
-      tag.textContent = `${originals} { display: none; }\n${before} {
-  content: '';
-  display: block;
-  flex: 0 0 16px;
-  width: 16px;
-  height: 16px;
-  background-color: currentColor;
-  mask-size: contain;
-  mask-position: center;
-  mask-repeat: no-repeat;
-}\n${masks}\n`
+  ctx.slots.inject('settings.section.icon', () => {
+    const disposers = [...SECTION_ICONS].map(([id, svg]) => {
+      const maskImage = `url("data:image/svg+xml,${encodeURIComponent(svg.replaceAll('currentColor', '#000'))}")`
+      return ctx.slots.register({ name: 'settings.section.icon', id }, ({ size }) => createElement('span', {
+        style: {
+          display: 'block', width: size, height: size, backgroundColor: 'currentColor',
+          maskImage, maskSize: 'contain', maskPosition: 'center', maskRepeat: 'no-repeat',
+        },
+      }))
+    })
+    return () => {
+      for (const dispose of disposers.reverse()) dispose()
     }
-    rebuild()
-    document.head.appendChild(tag)
-    const off = ctx.slots.subscribe('settings.section', rebuild)
-    return () => { off(); tag.remove() }
   })
 }

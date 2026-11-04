@@ -14,6 +14,9 @@ importers:
       lucide-static:
         specifier: 1.52.0
         version: 1.52.0
+      react:
+        specifier: 19.2.0
+        version: 19.2.0
 
 packages:
 
@@ -181,6 +184,10 @@ packages:
   lucide-static@1.52.0:
     resolution: {integrity: sha512-0zZYihAze4ZmUCcyNa9OkWYqn/Y5f9AdTh02AZIxMtP5ravcTTfoSIAnUPBH6ZvKxt+ZW28JB0ldzLRyD82fcw==}
 
+  react@19.2.0:
+    resolution: {integrity: sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==}
+    engines: {node: '>=0.10.0'}
+
 snapshots:
 
   '@esbuild/aix-ppc64@0.25.12':
@@ -291,3 +298,5 @@ snapshots:
       '@esbuild/win32-x64': 0.25.12
 
   lucide-static@1.52.0: {}
+
+  react@19.2.0: {}

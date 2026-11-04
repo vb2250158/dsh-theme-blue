@@ -17,13 +17,14 @@ const result = await build({
   write: false,
   sourcemap: false,
   legalComments: 'none',
+  external: ['react'],
   loader: { '.css': 'text', '.svg': 'text' },
   logLevel: 'silent',
 })
 
 const bundled = result.outputFiles.at(0)
 if (bundled === undefined) throw new Error('Theme client bundle did not produce JavaScript')
-const artifact = `window.__ModuleLoader__.load({\n  id: ${JSON.stringify(moduleId)},\n  factory: () => {\n    var module = { exports: {} }\n    var exports = module.exports\n${bundled.text}\n    return module.exports\n  },\n})\n`
+const artifact = `window.__ModuleLoader__.load({\n  id: ${JSON.stringify(moduleId)},\n  factory: (require) => {\n    var module = { exports: {} }\n    var exports = module.exports\n${bundled.text}\n    return module.exports\n  },\n})\n`
 
 await mkdir(dirname(output), { recursive: true })
 await writeFile(output, artifact)

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-rc.8.19 (2026-11-04)
+
+- 设置导航改用官方图标插槽，修复双图标并保留标签、排序、语言切换及卸载恢复。
+- Use the public settings icon slot to show one glyph per row, preserving labels, order, locale changes and disposal.
+
 ## 0.1.0-rc.8.18 (2026-11-02)
 
 - 新会话按钮跟随蓝色主题的浅色和深色底色，保留主要按钮颜色及主题停用清理。

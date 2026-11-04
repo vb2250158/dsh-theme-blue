@@ -1,6 +1,6 @@
 # dsh-theme-blue
 
-This release requires DSH 0.2.1-alpha.1 or a compatible 0.2 release. See [compatibility details](docs/dsh-0.2-compatibility.md).
+This release targets DSH 0.2.2-alpha.3 source Web with the public settings icon slot. See [environment details](docs/dsh-0.2-compatibility.md).
 
 私有主题基础、样式包和贴纸装饰的入口。
 
@@ -16,7 +16,9 @@ When enabled alongside `dafy-whale-theme`, the sidebar shows one whale mark and 
 
 桌面视口宽于 1280px 时，设置窗口宽 1120px、高度最多 900px，保留官方窗口留边以及导航和内容的独立滚动。较窄视口沿用原有布局；卸载主题后恢复官方尺寸。
 
-设置导航为当前 16 个设置项提供不同的功能图标，包括浏览器、规则、用量、对话、网络、订阅和开发工具。图标按公开 section 注册表的 ID 与排序生成主题样式，菜单重排或语言变化时保持对应；未收录的设置项沿用官方图标，卸载主题后恢复原样。Lucide 图标在构建时嵌入，无额外网络请求，许可见 [第三方声明](THIRD_PARTY_NOTICES.md)。
+设置导航为 16 个设置项提供功能图标。图标通过公开的 `settings.section.icon` 插槽按设置项 ID 注册，每项只显示一个图标，菜单重排或语言变化时保持对应；未收录项沿用官方图标，卸载主题后恢复原样。Lucide 图标在构建时嵌入，无额外网络请求，许可见 [第三方声明](THIRD_PARTY_NOTICES.md)。
+
+Settings navigation registers 16 semantic glyphs through the public `settings.section.icon` slot. Each section id selects one glyph, independently of order and locale. Unknown sections keep the official icon; unloading restores the originals. SVGs are bundled without extra network requests.
 
 设置弹窗中的复选框和现有滑动开关使用同一组主题滑条，保留标签点击、键盘、禁用状态和保存事件。尺寸与颜色由 `themes/blue/style.css` 中的 `--dsh-switch-*` 变量控制；继承的颜色变量无法解析时在控件处回退到 DSH 主题令牌，支持通过 portal 挂载的弹窗，关闭状态的圆点沿用官方颜色。聊天任务列表保持原样，卸载主题后恢复原始样式。
 
