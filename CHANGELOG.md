@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-rc.8.20 (2026-11-11)
+
+- 补齐主题市场发行说明和当前 DSH 0.2.2-rc.1 宿主版本声明；保留已有蓝色外观与设置图标。
+- Add marketplace release metadata and the tested DSH host version without changing the blue palette or settings glyphs.
+- 使用真实 Cordis、官方 ThemeRuntime 和 jsdom 验证浅色、深色、停用恢复及再次启用。
+- Verify light/dark palettes, disposal restoration and reactivation with real Cordis, the official ThemeRuntime and jsdom.
+
 ## 0.1.0-rc.8.19 (2026-11-04)
 
 - 设置导航改用官方图标插槽，修复双图标并保留标签、排序、语言切换及卸载恢复。

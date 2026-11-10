@@ -1,8 +1,14 @@
 # dsh-theme-blue
 
-This release targets DSH 0.2.2-alpha.3 source Web with the public settings icon slot. See [environment details](docs/dsh-0.2-compatibility.md).
+This release targets DSH 0.2.2-rc.1 source Web with the public settings icon slot. See [environment details](docs/dsh-0.2-compatibility.md).
 
-私有主题基础、样式包和贴纸装饰的入口。
+蓝色浅色与深色配色、设置导航图标和可撤销的界面样式。
+
+Blue light and dark palettes, settings glyphs and reversible interface styles.
+
+通过皮肤商店启用或停用本主题时，配色覆盖、样式和设置图标随插件生命周期一起生效或清理；停用后恢复底层主题及官方图标。浅色、深色和跟随系统仍由 DSH 的外观设置管理。商店收录方式见[皮肤市场](docs/marketplace.md)。
+
+Marketplace enable/disable controls this plugin's token layer, stylesheet and settings glyphs together. Disabling restores the underlying theme and original icons. DSH Appearance settings continue to control light, dark and system modes. See [marketplace integration](docs/marketplace.md).
 
 “新会话”按钮使用蓝色主题的浅色和深色底色。
 
@@ -44,6 +50,13 @@ pnpm dsh plugin --profile web add github:vb2250158/dsh-theme-blue#<commit>
 npm test
 npm run build
 npm pack --dry-run
+```
+
+维护环境的生命周期集成测试使用当前 DSH 源码构建，不读取运行中的 profile：
+
+```powershell
+$env:DSH_SOURCE_ROOT = '<current-dsh-source-checkout>'
+npm run test:lifecycle
 ```
 
 ## 许可证
