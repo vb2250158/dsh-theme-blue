@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-rc.8.21 (2026-11-19)
+
+- 声明支持验证过的 DSH 0.2.2-rc.5 源码 Web，并保留原有 rc.1 安装支持。
+- Declare support for DSH 0.2.2-rc.5 source Web and retain existing rc.1 installation support.
+
 ## 0.1.0-rc.8.20 (2026-11-11)
 
 - 补齐主题市场发行说明和当前 DSH 0.2.2-rc.1 宿主版本声明；保留已有蓝色外观与设置图标。

@@ -1,7 +1,7 @@
 {
   "name": "dsh-theme-blue",
   "description": "Blue light and dark palettes, settings glyphs and reversible styles for DeepSeek Harness Web",
-  "version": "0.1.0-rc.8.20",
+  "version": "0.1.0-rc.8.21",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
@@ -38,7 +38,7 @@
   },
   "license": "MIT",
   "engines": {
-    "dsh": "0.2.2-rc.1"
+    "dsh": "0.2.2-rc.1 || 0.2.2-rc.5"
   },
   "keywords": ["dsh-plugin", "theme", "skin", "blue"],
   "peerDependencies": {

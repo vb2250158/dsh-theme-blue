@@ -1,6 +1,6 @@
 # dsh-theme-blue
 
-This release targets DSH 0.2.2-rc.1 source Web with the public settings icon slot. See [environment details](docs/dsh-0.2-compatibility.md).
+This release targets DSH 0.2.2-rc.5 source Web with the public settings icon slot. See [environment details](docs/dsh-0.2-compatibility.md).
 
 蓝色浅色与深色配色、设置导航图标和可撤销的界面样式。
 
